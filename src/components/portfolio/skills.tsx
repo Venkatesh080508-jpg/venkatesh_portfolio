@@ -11,9 +11,9 @@ export function Skills() {
             <div key={group.category} className="border border-border p-6 md:p-8">
               <h3 className="label-caps text-primary">{group.category}</h3>
               <div className="mt-5 flex flex-wrap gap-2.5">
-                {group.items.map((skill) => (
+                {group.items.map((skill, index) => (
                   <span
-                    key={skill}
+                    key={`${skill}-${index}`}
                     className="rounded-full border border-border px-4 py-1.5 text-sm transition-colors hover:border-primary"
                   >
                     {skill}
