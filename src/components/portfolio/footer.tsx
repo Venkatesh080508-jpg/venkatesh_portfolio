@@ -14,11 +14,21 @@ export function Footer() {
             </p>
           </div>
           <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            <a href={content.contact.github.href} className="transition-colors hover:text-primary">
+            <a
+              href={content.contact.github.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-primary"
+            >
               GitHub
             </a>
             <span aria-hidden>·</span>
-            <a href={content.contact.linkedin.href} className="transition-colors hover:text-primary">
+            <a
+              href={content.contact.linkedin.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-primary"
+            >
               LinkedIn
             </a>
             <span aria-hidden>·</span>
@@ -31,7 +41,7 @@ export function Footer() {
           </nav>
         </div>
         <div className="mt-10 border-t border-border pt-6">
-          <p className="text-xs text-muted-foreground">© 2026 {content.name}</p>
+          <p className="text-xs text-muted-foreground">© 2026 Gaddam Venkatesh. All rights reserved.</p>
         </div>
       </div>
     </footer>

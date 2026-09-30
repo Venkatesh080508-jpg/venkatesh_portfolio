@@ -6,8 +6,6 @@ const inputClasses =
   "mt-2 w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary";
 
 export function Contact() {
-  // Placeholder form: opens the visitor's email client addressed to you.
-  // Replace [EMAIL] in portfolio-content.ts to make it live.
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -23,17 +21,28 @@ export function Contact() {
 
   const details = [
     { label: "Email", value: content.contact.email, href: `mailto:${content.contact.email}` },
-    { label: "GitHub", value: content.contact.github.label, href: content.contact.github.href },
-    { label: "LinkedIn", value: content.contact.linkedin.label, href: content.contact.linkedin.href },
-    { label: "Instagram / Other", value: content.contact.other.label, href: content.contact.other.href },
+    { label: "Phone", value: content.contact.phone, href: `tel:${content.contact.phone}` },
+    { label: "Current City", value: content.contact.currentCity, href: "#contact" },
+    {
+      label: "LinkedIn",
+      value: content.contact.linkedin.label,
+      href: content.contact.linkedin.href,
+      external: true,
+    },
+    {
+      label: "GitHub",
+      value: content.contact.github.label,
+      href: content.contact.github.href,
+      external: true,
+    },
   ];
 
   return (
     <section id="contact" className="scroll-mt-20 border-b border-border bg-card/60">
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-        <SectionHeading index="05 — Contact" title="Let's Connect" />
+        <SectionHeading index="06 — Contact" title="Contact Me" />
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-          Have a project, idea, or opportunity in mind? Let&apos;s talk.
+          {content.contact.intro}
         </p>
 
         <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-20">
@@ -47,6 +56,7 @@ export function Contact() {
                 <dd className="min-w-0 truncate text-right">
                   <a
                     href={item.href}
+                    {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className="text-sm font-medium transition-colors hover:text-primary"
                   >
                     {item.value}
@@ -56,7 +66,7 @@ export function Contact() {
             ))}
           </dl>
 
-          <form onSubmit={handleSubmit} className="border border-border p-6 md:p-8">
+          <form onSubmit={handleSubmit} className="border border-border bg-background p-6 md:p-8">
             <div className="space-y-5">
               <div>
                 <label htmlFor="contact-name" className="label-caps text-muted-foreground">
@@ -66,7 +76,7 @@ export function Contact() {
                   id="contact-name"
                   name="name"
                   required
-                  placeholder="[YOUR NAME]"
+                  placeholder="Your Name"
                   className={inputClasses}
                 />
               </div>
@@ -79,7 +89,7 @@ export function Contact() {
                   name="email"
                   type="email"
                   required
-                  placeholder="[YOUR EMAIL]"
+                  placeholder="your.email@example.com"
                   className={inputClasses}
                 />
               </div>
@@ -92,7 +102,7 @@ export function Contact() {
                   name="message"
                   required
                   rows={5}
-                  placeholder="[YOUR MESSAGE]"
+                  placeholder="Write your message here..."
                   className={`${inputClasses} resize-none`}
                 />
               </div>

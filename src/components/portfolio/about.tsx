@@ -12,19 +12,22 @@ export function About() {
               <p key={index}>{paragraph}</p>
             ))}
           </div>
-          <dl className="h-fit border border-border">
-            {content.about.info.map((item, index) => (
-              <div
-                key={item.label}
-                className={`flex items-baseline justify-between gap-6 px-6 py-4 ${
-                  index > 0 ? "border-t border-border" : ""
-                }`}
-              >
-                <dt className="label-caps shrink-0 text-muted-foreground">{item.label}</dt>
-                <dd className="text-right text-sm font-medium">{item.value}</dd>
-              </div>
-            ))}
-          </dl>
+          <div className="h-fit">
+            <h3 className="label-caps mb-3 text-primary">Academic &amp; Profile Details</h3>
+            <dl className="border border-border">
+              {content.about.info.map((item, index) => (
+                <div
+                  key={item.label}
+                  className={`flex items-baseline justify-between gap-6 px-6 py-4 ${
+                    index > 0 ? "border-t border-border" : ""
+                  }`}
+                >
+                  <dt className="label-caps shrink-0 text-muted-foreground">{item.label}</dt>
+                  <dd className="text-right text-sm font-medium">{item.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </div>
     </section>

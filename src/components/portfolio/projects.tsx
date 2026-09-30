@@ -30,18 +30,26 @@ export function Projects() {
                 ))}
               </div>
               <div className="mt-6 flex items-center gap-5 border-t border-border pt-5 md:mt-auto">
-                <a
-                  href={project.github}
-                  className="text-sm font-medium underline-offset-4 transition-colors hover:text-primary hover:underline"
-                >
-                  GitHub
-                </a>
-                <a
-                  href={project.demo}
-                  className="text-sm font-medium underline-offset-4 transition-colors hover:text-primary hover:underline"
-                >
-                  Live Demo ↗
-                </a>
+                {project.github ? (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium underline-offset-4 transition-colors hover:text-primary hover:underline"
+                  >
+                    GitHub ↗
+                  </a>
+                ) : null}
+                {project.demo ? (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium underline-offset-4 transition-colors hover:text-primary hover:underline"
+                  >
+                    Live Demo ↗
+                  </a>
+                ) : null}
               </div>
             </article>
           ))}

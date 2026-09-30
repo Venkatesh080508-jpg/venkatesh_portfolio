@@ -10,12 +10,13 @@ export function Hero() {
             Hi, I&apos;m <span className="italic text-primary">{content.name}</span>.
           </h1>
           <p className="mt-6 text-xl font-medium md:text-2xl">{content.role}</p>
+          <p className="mt-3 text-lg font-normal text-foreground/90">{content.heroTagline}</p>
           <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
             {content.heroDescription}
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="#work"
+              href="#projects"
               className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               View My Work
@@ -25,7 +26,7 @@ export function Hero() {
               href="#contact"
               className="group inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold transition-colors hover:border-primary hover:text-primary"
             >
-              Let&apos;s Connect
+              Contact Me
               <span aria-hidden className="transition-transform group-hover:translate-y-0.5">↓</span>
             </a>
           </div>
