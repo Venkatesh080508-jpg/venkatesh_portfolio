@@ -32,13 +32,15 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Small typographic detail echoing the "/" logo mark */}
+        {/* Profile photo */}
         <div className="hidden shrink-0 lg:block">
-          <div className="flex h-64 w-64 flex-col items-center justify-center border border-border xl:h-80 xl:w-80">
-            <span aria-hidden className="font-display text-[8rem] leading-none text-primary xl:text-[10rem]">
-              /
-            </span>
-            <p className="label-caps mt-4 text-muted-foreground">{content.name} — 2026</p>
+          <div className="h-64 w-64 overflow-hidden border border-border xl:h-80 xl:w-80">
+            <img
+              src="/profile.jpeg"
+              alt={content.name}
+              className="h-full w-full object-cover object-[50%_20%]"
+              style={{ objectPosition: "50% 20%" }}
+            />
           </div>
         </div>
       </div>

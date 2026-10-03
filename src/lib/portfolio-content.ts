@@ -20,7 +20,7 @@ export const content = {
       { label: "College", value: "Amrita Vishwa Vidyapeetham, Chennai" },
       { label: "Degree", value: "Bachelor of Technology (B.Tech)" },
       { label: "Branch", value: "Artificial Intelligence & Engineering" },
-      { label: "Year", value: "1st Year" },
+      { label: "Year", value: "2nd Year" },
       { label: "Location", value: "Chennai, India" },
       { label: "Current City", value: "Tirupati, Andhra Pradesh, India" },
     ],
@@ -74,50 +74,6 @@ export const content = {
     },
     {
       number: "02",
-      name: "AI-Based Prediction of CRISPR-Cas9 Guide RNA Efficiency and Off-Target Effects",
-      description:
-        "A machine learning based project focused on predicting CRISPR-Cas9 guide RNA efficiency and identifying potential off-target effects. The project explores how AI and machine learning can support safer and more efficient gene-editing research.",
-      tech: [
-        "Artificial Intelligence",
-        "Machine Learning",
-        "Python",
-        "Data Analysis",
-        "CRISPR-Cas9",
-      ],
-      github: "https://github.com/Venkatesh080508-jpg",
-      demo: "",
-    },
-    {
-      number: "03",
-      name: "Secure and Privacy-Preserving Trusted Computing Framework",
-      description:
-        "A cybersecurity-focused project exploring a trusted computing framework designed around security, privacy, and trustworthy computation.",
-      tech: [
-        "Cybersecurity",
-        "Trusted Computing",
-        "Privacy",
-        "Secure Systems",
-      ],
-      github: "https://github.com/Venkatesh080508-jpg",
-      demo: "",
-    },
-    {
-      number: "04",
-      name: "Real-Time Smart Parking Simulation",
-      description:
-        "A simulation of a real-time parking management system using data structures to manage vehicle entry, parking allocation, and vehicle exit efficiently.",
-      tech: [
-        "C / Python",
-        "Arrays",
-        "Queues",
-        "Data Structures",
-        "Algorithmic Problem Solving",
-      ],
-      github: "https://github.com/Venkatesh080508-jpg",
-      demo: "",
-    },
-    {
-      number: "05",
       name: "Django Library Management System",
       description:
         "A web-based library management application developed using Django. The application demonstrates basic CRUD operations and web application development concepts.",
