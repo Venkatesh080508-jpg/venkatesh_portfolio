@@ -59,6 +59,23 @@ export const content = {
   projects: [
     {
       number: "01",
+      name: "Morrow Skin — Skincare E-Commerce Experience",
+      description:
+        "A responsive skincare e-commerce concept designed around a premium, approachable brand identity. Features product discovery, search, filtering, sorting, product detail pages, a persistent shopping cart, promotional codes, and a simulated checkout experience.",
+      tech: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "React Router",
+        "CSS",
+        "UI/UX Design",
+        "Vercel",
+      ],
+      github: "https://github.com/Venkatesh080508-jpg/morrow-skin",
+      demo: "https://morrow-skin.vercel.app/",
+    },
+    {
+      number: "02",
       name: "Smart Parking Space Discovery and Dynamic Allocation System",
       description:
         "A smart parking system designed to help users discover and allocate available parking spaces efficiently. The project explores spatial data structures and search techniques for real-time parking management.",
@@ -73,7 +90,7 @@ export const content = {
       demo: "",
     },
     {
-      number: "02",
+      number: "03",
       name: "Django Library Management System",
       description:
         "A web-based library management application developed using Django. The application demonstrates basic CRUD operations and web application development concepts.",
@@ -89,6 +106,7 @@ export const content = {
       demo: "",
     },
   ],
+
 
   skills: [
     {
